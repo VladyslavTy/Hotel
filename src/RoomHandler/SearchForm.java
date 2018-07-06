@@ -1,21 +1,21 @@
 package RoomHandler;
 
 import Room.RoomCharacteristic;
+import RoomHandler.searchForms.CompositeValidator;
 
 import java.time.Period;
 
 public class SearchForm {
     Period searchPeriod;
-    RoomCharacteristic characteristic;
+    CompositeValidator characteristics = new CompositeValidator();
     int amount;
 
     public SearchForm(){
 
     }
 
-    public void fill(Period period, RoomCharacteristic characteristic, int amount){
-        this.searchPeriod = period;
-        this.characteristic = characteristic;
-        this.amount = amount;
+    public void add(){
+
     }
+
 }

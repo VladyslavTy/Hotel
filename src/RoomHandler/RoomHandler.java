@@ -19,7 +19,22 @@ public class RoomHandler {
     public boolean checkAvailability(SearchForm form){
         boolean isValidate = true;
         int amountOfRooms = 0;
-        for (Room room : totalRooms
+        for ( Room room : totalRooms
+             ) {
+            if(form.characteristics.validateForm(room)) {
+                amountOfRooms += 1;
+            }
+        }
+
+        for (Booking booking: listOfBooking
+             ) {
+            if(booking.bookingPeriod.equals(form.searchPeriod)){
+                amountOfRooms -= 1;
+            }
+        }
+
+
+        /*for (Room room : totalRooms
              ) {
             if(room.characteristic == form.characteristic)
                 amountOfRooms += 1;
@@ -30,7 +45,7 @@ public class RoomHandler {
             if(booking.bookingPeriod.equals(form.searchPeriod)){
                 amountOfRooms -= 1;
             }
-        }
+        }*/
 
         if(amountOfRooms < form.amount){
             isValidate = false;
@@ -39,10 +54,10 @@ public class RoomHandler {
     }
 
     public void reserve(SearchForm form){
-        if (checkAvailability(form)){
+        /*if (checkAvailability(form)){
             Client customer = new Client("Vasya", "9379992");
             listOfBooking.add(new Booking(form.characteristic,form.searchPeriod,customer));
-        }
+        }*/
     }
 
 }
