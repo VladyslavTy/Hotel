@@ -1,10 +1,9 @@
 package RoomHandler.conditions;
 
-import java.time.LocalDate;
-import java.time.Period;
+import Room.RoomCharacteristic;
 
 public interface Condition {
-    boolean validate(Period period);
+    boolean validate(RoomCharacteristic characteristic);
     void add(Condition condition);
     void remove(Condition condition);
 

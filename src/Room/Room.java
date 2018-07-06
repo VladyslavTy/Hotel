@@ -6,11 +6,11 @@ import java.time.Period;
 
 public class Room {
     int roomNumber;
-    RoomCharacteristic roomCharacteristic;
+    RoomCharacteristic characteristic;
     Period periodOfUse;
 
-    public Room(RoomCharacteristic roomCharacteristic){
-        this.roomCharacteristic = roomCharacteristic;
+    public Room(RoomCharacteristic characteristic){
+        this.characteristic = characteristic;
     }
 
 }
