@@ -1,11 +1,8 @@
 package RoomHandler;
 
 import Room.Room;
-
-import java.time.Period;
 import java.util.ArrayList;
-import Room.RoomCharacteristic;
-import person.Client;
+
 
 public class RoomHandler {
     ArrayList<Room> totalRooms;
@@ -28,7 +25,7 @@ public class RoomHandler {
 
         for (Booking booking: listOfBooking
              ) {
-            if(booking.bookingPeriod.intersects(form.searchPeriod)){
+            if(booking.bookingPeriod.intersects(form.bookingPeriod)){
                 amountOfRooms -= 1;
             }
         }
@@ -52,6 +49,8 @@ public class RoomHandler {
         }
         return isValidate;
     }
+
+
 
     public void reserve(SearchForm form){
         /*if (checkAvailability(form)){

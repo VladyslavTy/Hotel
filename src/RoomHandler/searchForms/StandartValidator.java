@@ -3,9 +3,7 @@ package RoomHandler.searchForms;
 import Room.Room;
 import Room.RoomType;
 
-public class StandartValidator {
-    public class LuxuryValidator implements  SearchFormValidator {
-
+public class StandartValidator implements SearchFormValidator {
 
         @Override
         public boolean validateForm(Room room) {
@@ -21,5 +19,5 @@ public class StandartValidator {
         public void remove(SearchFormValidator form) {
 
         }
-    }
 }
+
