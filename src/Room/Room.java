@@ -6,7 +6,7 @@ import java.time.Period;
 
 public class Room {
     int roomNumber;
-    RoomCharacteristic characteristic;
+    public RoomCharacteristic characteristic;
     Period periodOfUse;
 
     public Room(RoomCharacteristic characteristic){

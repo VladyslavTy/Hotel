@@ -9,8 +9,12 @@ public class SearchForm {
     RoomCharacteristic characteristic;
     int amount;
 
-    public SearchForm(Period searchPeriod, RoomCharacteristic characteristic, int amount){
-        this.amount = amount;
+    public SearchForm(){
+
+    }
+
+    public void fill(Period period, RoomCharacteristic characteristic, int amount){
+        this.searchPeriod = period;
         this.characteristic = characteristic;
         this.amount = amount;
     }
