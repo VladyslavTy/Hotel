@@ -7,10 +7,10 @@ import java.time.Period;
 
 public class Booking {
     RoomCharacteristic characteristic;
-    Period bookingPeriod;
+    MyPeriod bookingPeriod;
     Client client;
 
-    public Booking(RoomCharacteristic characteristic, Period period, Client client){
+    public Booking(RoomCharacteristic characteristic, MyPeriod period, Client client){
         this.characteristic = characteristic;
         this.bookingPeriod = period;
         this.client = client;

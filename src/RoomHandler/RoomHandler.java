@@ -28,7 +28,7 @@ public class RoomHandler {
 
         for (Booking booking: listOfBooking
              ) {
-            if(booking.bookingPeriod.equals(form.searchPeriod)){
+            if(booking.bookingPeriod.intersects(form.searchPeriod)){
                 amountOfRooms -= 1;
             }
         }
