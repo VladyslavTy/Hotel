@@ -1,7 +1,6 @@
 package RoomHandler.searchForms;
 
 import Room.Room;
-import RoomHandler.SearchForm;
 
 import java.util.ArrayList;
 

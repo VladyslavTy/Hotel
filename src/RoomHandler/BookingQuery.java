@@ -3,12 +3,12 @@ package RoomHandler;
 import RoomHandler.searchForms.*;
 import java.util.ArrayList;
 
-public class SearchForm {
-    MyPeriod bookingPeriod;
+public class BookingQuery {
+    BookingPeriod bookingPeriod;
     CompositeValidator characteristics = new CompositeValidator();
     int amount;
 
-    public SearchForm(MyPeriod period, int amount, ArrayList<Integer> selectedCharacteristics){
+    public BookingQuery(BookingPeriod period, int amount, ArrayList<Integer> selectedCharacteristics){
         this.bookingPeriod = period;
         this.amount = amount;
         addCharacteristics(selectedCharacteristics);

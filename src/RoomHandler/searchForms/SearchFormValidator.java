@@ -1,11 +1,10 @@
 package RoomHandler.searchForms;
 
-import Room.Room;
-import RoomHandler.SearchForm;
+import Room.RoomCharacteristic;
 
 public interface SearchFormValidator {
 
-    boolean validateForm(Room room);
+    boolean validateForm(RoomCharacteristic characteristic);
 
     void add(SearchFormValidator form);
 

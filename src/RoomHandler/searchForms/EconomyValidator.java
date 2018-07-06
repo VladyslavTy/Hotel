@@ -1,13 +1,13 @@
 package RoomHandler.searchForms;
 
-import Room.Room;
+import Room.RoomCharacteristic;
 import Room.RoomType;
 
 public class EconomyValidator implements SearchFormValidator {
 
     @Override
-    public boolean validateForm(Room room) {
-        return room.characteristic.roomType == RoomType.economy;
+    public boolean validateForm(RoomCharacteristic characteristic) {
+        return characteristic.roomType == RoomType.economy;
     }
 
     @Override

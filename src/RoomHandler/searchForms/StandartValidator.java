@@ -1,13 +1,13 @@
 package RoomHandler.searchForms;
 
-import Room.Room;
+import Room.RoomCharacteristic;
 import Room.RoomType;
 
 public class StandartValidator implements SearchFormValidator {
 
         @Override
-        public boolean validateForm(Room room) {
-            return room.characteristic.roomType == RoomType.standart;
+        public boolean validateForm(RoomCharacteristic characteristic) {
+            return characteristic.roomType == RoomType.standart;
         }
 
         @Override

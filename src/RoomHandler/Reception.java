@@ -4,16 +4,16 @@ import Room.Room;
 import java.util.ArrayList;
 
 
-public class RoomHandler {
+public class Reception {
     ArrayList<Room> totalRooms;
     ArrayList<Booking> listOfBooking;
 
-    public RoomHandler(){
+    public Reception(){
         this.totalRooms = new ArrayList<>();
         this.listOfBooking = new ArrayList<>();
     }
 
-    public boolean checkAvailability(SearchForm form){
+    public boolean checkAvailability(BookingQuery form){
         boolean isValidate = true;
         int amountOfRooms = 0;
         for ( Room room : totalRooms
@@ -25,7 +25,7 @@ public class RoomHandler {
 
         for (Booking booking: listOfBooking
              ) {
-            if(booking.bookingPeriod.intersects(form.bookingPeriod)){
+            if(booking.bookingPeriod.intersects(form.bookingPeriod) && form.characteristics.validateForm(booking.characteristic)){
                 amountOfRooms -= 1;
             }
         }
@@ -52,7 +52,7 @@ public class RoomHandler {
 
 
 
-    public void reserve(SearchForm form){
+    public void reserve(BookingQuery form){
         /*if (checkAvailability(form)){
             Client customer = new Client("Vasya", "9379992");
             listOfBooking.add(new Booking(form.characteristic,form.searchPeriod,customer));
